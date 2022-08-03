@@ -16,14 +16,14 @@ const cities = {
     692194: "Sumy",
 }
 
-const valuta = {
-    703448: "Kyiv",
-    706483: "Kharkiv",
-    702550: "Lviv",
-    709930: "Dnipro",
-    698740: "Odessa",
-    692194: "Sumy",
-}
+// const valuta = {
+//     703448: "Kyiv",
+//     706483: "Kharkiv",
+//     702550: "Lviv",
+//     709930: "Dnipro",
+//     698740: "Odessa",
+//     692194: "Sumy",
+// }
 
 
 let TempEl = '';
@@ -51,22 +51,22 @@ function getWeather() {
 
 function getValuta(i) {
 
-    fetch("https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5")
+    // fetch("https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5")
     fetch(param.urlapiprivat)
         .then(valuta1 => valuta1.json())
         .then(valuta2 => {
             document.querySelector('div.CurVal').innerHTML = `Валюта: ${valuta2[i].ccy}`;
-            document.querySelector('div.buy').innerHTML = `Покупка: ${valuta2[i].buy}`;
-            document.querySelector('div.sale').innerHTML = `Продажа: ${valuta2[i].sale}`;
+            document.querySelector('div.buy').innerHTML = `Купівля: ${valuta2[i].buy}`;
+            document.querySelector('div.sale').innerHTML = `Продаж: ${valuta2[i].sale}`;
         });
 }
 
 function showWeather(data) {
     document.querySelector('div.temp').innerHTML = `Температура: ${Math.round(data.main.temp)}&deg;`;
-    document.querySelector('div.humid').innerHTML = `Влажность: ${data.main.humidity} %`;
-    document.querySelector('div.pressure').innerHTML = `Давление: ${Math.round(data.main.pressure / 1.33)} мм.р.с.`;
-    document.querySelector('div.clouds').innerHTML = `Облачность: ${data.weather[0].main} `;
-    document.querySelector('div.iconka').innerHTML = `Иконка погоды`;
+    document.querySelector('div.humid').innerHTML = `Влажність: ${data.main.humidity} %`;
+    document.querySelector('div.pressure').innerHTML = `Тиск: ${Math.round(data.main.pressure / 1.33)} мм.р.с.`;
+    document.querySelector('div.clouds').innerHTML = `Хмарність: ${data.weather[0].main} `;
+    document.querySelector('div.iconka').innerHTML = `Іконка погоди`;
     document.querySelector('div.ico img').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 }
 
