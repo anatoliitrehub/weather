@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Погода в городах и курсы валют Украины</h1>
+        <hr>
+        <div class="wrap">
+
+            <div class="inpInf">
+                <div>Выберите город</div>
+                <form>
+                    <select class="city">
+
+                    </select>
+                </form>
+            </div>
+
+            <div class="outInf">
+                <div class="idTown"></div>
+
+                <div class="temp"></div>
+                <div class="humid"></div>
+                <div class="pressure"></div>
+                <div class="clouds"></div>
+            </div>
+            <div class="ico">
+                <div class="iconka"></div>
+                <img src="" alt="">
+            </div>
+        </div>
+        <!-- запрос валюты -->
+
+        <div class="wrap">
+
+            <div class="inpInf">
+                <div>Выберите валюту</div>
+                <button class="btnusd">USD</button>
+                <button class="rur">RUR</button>
+                <button class="eur">EUR</button>
+                <br>
+                <!-- вводим любой текст -->
+                <input type="text" class="USD2" value="text" placeholder="you can input text" alt="area for text"
+                    data="dannie">
+                <button class="btn">OK</button>
+
+
+
+            </div>
+
+            <div class="outInf">
+                <div>Текущий курс</div>
+
+                <div class="CurVal"></div>
+                <div class="buy"></div>
+                <div class="sale"></div>
+            </div>
+            <div class="outInf">
+                <!-- любой вводимый текст -->
+                <div class="rur1">Здесь будет текст</div>
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
