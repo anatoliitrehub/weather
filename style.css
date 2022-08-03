@@ -1,37 +1,41 @@
-html, body {
+html,
+body {
     font-family: serif;
 }
+
 body {
     margin: auto 20px;
 }
 
-.wrap{
+.wrap {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
-form{
+form {
     padding: 10%;
 }
 
-h1{
+h1 {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-select{
+select {
     font-size: 2rem;
     color: darkorange;
     border: 2px double red;
-    animation:infinite;
+    animation: infinite;
 }
 
-select:hover{
+select:hover {
     cursor: pointer;
-    background-color:khaki;
+    background-color: khaki;
 }
 
-.inpInf, .outInf, .ico{
+.inpInf,
+.outInf,
+.ico {
     text-align: center;
     font-size: 1.5rem;
     width: 30%;
@@ -43,14 +47,23 @@ select:hover{
     margin: 20px;
 }
 
-.temp{
+.temp {
     font-family: 'Courier New', Courier, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: brown;
-    
+
 }
 
-.humid{
+.humid {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(18, 5, 95);
 }
 
+.USD2 {
+    width: 100%;
+}
+
+.city {
+    width: 100%;
+    font-size: initial;
+
+}
